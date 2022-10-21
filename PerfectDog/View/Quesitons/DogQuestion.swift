@@ -12,7 +12,7 @@ import SwiftUI
 struct DogQuestion: View {
     
     
-    let tasks: [String]
+    let questionArr: [String]
     let handlerTxt: String
     let symbolImg: String
     
@@ -24,9 +24,9 @@ struct DogQuestion: View {
             List {
                 Section(header: DogTab(systemSymbol: symbolImg, tabNameText: handlerTxt))
                 {
-                    ForEach(tasks, id: \.self, content: {
-                        taskName in
-                        NavigationLink(taskName, destination:DogDetail(dogQuestion: taskName))
+                    ForEach(questionArr, id: \.self, content: {
+                        question in
+                        NavigationLink(question, destination:DogDetail(dogQuestion: question))
                     })
                 }
             }
@@ -40,7 +40,10 @@ struct DogQuestion: View {
 
 struct DogQuestion_Previews: PreviewProvider {
     static var previews: some View {
-        DogQuestion(tasks: ["1", "2", "3", "4" , "5"], handlerTxt:
-                        "How active are you?", symbolImg: "car")
+//         DogQuestion(questionArr: ["1", "2", "3", "4" , "5"], handlerTxt:
+//                         "How active are you?", symbolImg: "car")
+        
+                DogQuestion(questionArr: ["Never", "Sometimes", "Usually", "Most of the time" , "Always"], handlerTxt:
+                        "How often do you walk?", symbolImg: "car")
     }
 }
