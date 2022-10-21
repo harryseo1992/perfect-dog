@@ -20,6 +20,7 @@ struct UserPage: View {
             UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
 
         }
+    
     var body: some View {
         VStack {
             NavigationView {
