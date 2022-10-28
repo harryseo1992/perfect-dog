@@ -36,27 +36,6 @@ struct UserPage: View {
 
 // Perhaps this Color extension can go elsewhere
 
-extension Color {
-    static let oldPrimaryColor = Color(UIColor.systemOrange)
-    static let perfectDog = Color("PerfectDog")
-}
-
-extension UIColor {
-    class var perfectDog: UIColor {
-            let perfectDogColor = 0xF0AC00
-            return UIColor.rgb(fromHex: perfectDogColor)
-        }
-
-        class func rgb(fromHex: Int) -> UIColor {
-
-            let red =   CGFloat((fromHex & 0xFF0000) >> 16) / 0xFF
-            let green = CGFloat((fromHex & 0x00FF00) >> 8) / 0xFF
-            let blue =  CGFloat(fromHex & 0x0000FF) / 0xFF
-            let alpha = CGFloat(1.0)
-
-            return UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        }
-}
 
 struct UserPage_Previews: PreviewProvider {
     static var previews: some View {
