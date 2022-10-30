@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1B5AD0290E0156007FF712 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1B5ACF290E0156007FF712 /* LogoImage.swift */; };
 		4F8157D428E7BDCE00D28C03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F8157D328E7BDCE00D28C03 /* GoogleService-Info.plist */; };
 		4F8157D728E7BE8B00D28C03 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8157D628E7BE8B00D28C03 /* FirebaseAnalytics */; };
 		4F8157D928E7BE8B00D28C03 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8157D828E7BE8B00D28C03 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1B5ACF290E0156007FF712 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		4F8157D328E7BDCE00D28C03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F8F9E1A28F4D9B60031EEB6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6176F47028DE619E002D889C /* PerfectDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 			children = (
 				6176F47328DE619E002D889C /* PerfectDogApp.swift */,
 				4F8F9E1A28F4D9B60031EEB6 /* LoginView.swift */,
+				4F1B5ACF290E0156007FF712 /* LogoImage.swift */,
 				6176F47528DE619E002D889C /* RegisterView.swift */,
 				6176F47728DE619F002D889C /* Assets.xcassets */,
 				4F8157D328E7BDCE00D28C03 /* GoogleService-Info.plist */,
@@ -160,6 +163,7 @@
 			files = (
 				6176F47628DE619E002D889C /* RegisterView.swift in Sources */,
 				6176F47428DE619E002D889C /* PerfectDogApp.swift in Sources */,
+				4F1B5AD0290E0156007FF712 /* LogoImage.swift in Sources */,
 				4F8F9E1B28F4D9B60031EEB6 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

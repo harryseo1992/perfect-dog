@@ -24,6 +24,8 @@ struct RegisterView: View {
     
     var content: some View {
         VStack {
+            LogoImage()
+                .offset(y:-50)
             TextField("Email", text: $email)
                 .textFieldStyle(.plain)
             Rectangle()
