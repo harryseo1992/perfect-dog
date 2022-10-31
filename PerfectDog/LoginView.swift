@@ -12,11 +12,15 @@ import Firebase
 struct LoginView: View {
     @State var email = ""
     @State var password = ""
-    @State private var userIsLoggedIn = false
+    @State var userIsLoggedIn = false
     
     // toggling views
     var body: some View {
-        content
+        if (userIsLoggedIn) {
+            UserPage(userIsLoggedIn: userIsLoggedIn)
+        } else {
+            content
+        }
     }
     
     var content: some View {

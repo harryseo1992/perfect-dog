@@ -17,6 +17,10 @@
 		6176F47628DE619E002D889C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6176F47528DE619E002D889C /* RegisterView.swift */; };
 		6176F47828DE619F002D889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6176F47728DE619F002D889C /* Assets.xcassets */; };
 		6176F47B28DE619F002D889C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6176F47A28DE619F002D889C /* Preview Assets.xcassets */; };
+		61E57D71290FBAE800D579BF /* UserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D70290FBAE800D579BF /* UserPage.swift */; };
+		61E57D73290FBB0100D579BF /* PerfectDogTabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D72290FBB0100D579BF /* PerfectDogTabViewItem.swift */; };
+		61E57D75290FBB1B00D579BF /* PastHistoryTabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D74290FBB1B00D579BF /* PastHistoryTabViewItem.swift */; };
+		61E57D7A290FBB5B00D579BF /* PerfectDogColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D79290FBB5B00D579BF /* PerfectDogColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		6176F47528DE619E002D889C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		6176F47728DE619F002D889C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6176F47A28DE619F002D889C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		61E57D70290FBAE800D579BF /* UserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage.swift; sourceTree = "<group>"; };
+		61E57D72290FBB0100D579BF /* PerfectDogTabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectDogTabViewItem.swift; sourceTree = "<group>"; };
+		61E57D74290FBB1B00D579BF /* PastHistoryTabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastHistoryTabViewItem.swift; sourceTree = "<group>"; };
+		61E57D79290FBB5B00D579BF /* PerfectDogColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectDogColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,8 @@
 		6176F47228DE619E002D889C /* PerfectDog */ = {
 			isa = PBXGroup;
 			children = (
+				61E57D76290FBB2C00D579BF /* Extensions */,
+				61E57D6E290FBAAC00D579BF /* Views */,
 				6176F47328DE619E002D889C /* PerfectDogApp.swift */,
 				4F8F9E1A28F4D9B60031EEB6 /* LoginView.swift */,
 				4F1B5ACF290E0156007FF712 /* LogoImage.swift */,
@@ -80,6 +90,32 @@
 				6176F47A28DE619F002D889C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		61E57D6E290FBAAC00D579BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				61E57D6F290FBAB700D579BF /* UserPage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61E57D6F290FBAB700D579BF /* UserPage */ = {
+			isa = PBXGroup;
+			children = (
+				61E57D70290FBAE800D579BF /* UserPage.swift */,
+				61E57D72290FBB0100D579BF /* PerfectDogTabViewItem.swift */,
+				61E57D74290FBB1B00D579BF /* PastHistoryTabViewItem.swift */,
+			);
+			path = UserPage;
+			sourceTree = "<group>";
+		};
+		61E57D76290FBB2C00D579BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61E57D79290FBB5B00D579BF /* PerfectDogColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E57D75290FBB1B00D579BF /* PastHistoryTabViewItem.swift in Sources */,
 				6176F47628DE619E002D889C /* RegisterView.swift in Sources */,
+				61E57D7A290FBB5B00D579BF /* PerfectDogColor.swift in Sources */,
 				6176F47428DE619E002D889C /* PerfectDogApp.swift in Sources */,
+				61E57D73290FBB0100D579BF /* PerfectDogTabViewItem.swift in Sources */,
 				4F1B5AD0290E0156007FF712 /* LogoImage.swift in Sources */,
 				4F8F9E1B28F4D9B60031EEB6 /* LoginView.swift in Sources */,
+				61E57D71290FBAE800D579BF /* UserPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
