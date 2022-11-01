@@ -11,15 +11,15 @@ import Firebase
 let coloredNavAppearance = UINavigationBarAppearance()
 
 struct UserPage: View {
-    @State var userIsLoggedIn: Bool
-    init(userIsLoggedIn: Bool) {
+    @Binding var userIsLoggedIn: Bool
+    init(isUserLoggedIn: Binding<Bool>) {
         coloredNavAppearance.backgroundColor = .perfectDog
             coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
 
             UINavigationBar.appearance().standardAppearance = coloredNavAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
-        self.userIsLoggedIn = userIsLoggedIn
+        self._userIsLoggedIn = isUserLoggedIn
         }
     var body: some View {
         VStack {
@@ -45,8 +45,8 @@ struct UserPage: View {
                     .onAppear {
                         Auth.auth().addStateDidChangeListener {
                             (auth, user) in
-                            if user != nil {
-                                userIsLoggedIn.toggle()
+                            if user == nil {
+                                self.userIsLoggedIn.toggle()
                             }
                         }
                     }
@@ -55,11 +55,13 @@ struct UserPage: View {
         }
     }
     func logOut() {
-        let firebaseAuth = Auth.auth()
         do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
+            try Auth.auth().signOut()
+            self.userIsLoggedIn = false
+            print("Attempting logout")
+            print("\(userIsLoggedIn)")
+        } catch  {
+            print("Already logged out")
         }
     }
 }
@@ -69,7 +71,8 @@ struct UserPage: View {
 
 
 struct UserPage_Previews: PreviewProvider {
+    @State static var isUserCurrentlyLoggedIn = false
     static var previews: some View {
-        UserPage(userIsLoggedIn: false)
+        UserPage(isUserLoggedIn: $isUserCurrentlyLoggedIn)
     }
 }

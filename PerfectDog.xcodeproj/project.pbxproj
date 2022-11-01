@@ -13,6 +13,7 @@
 		4F8157D928E7BE8B00D28C03 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8157D828E7BE8B00D28C03 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		4F8157DB28E7BE8B00D28C03 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8157DA28E7BE8B00D28C03 /* FirebaseAuth */; };
 		4F8F9E1B28F4D9B60031EEB6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F9E1A28F4D9B60031EEB6 /* LoginView.swift */; };
+		610864CE29112B3D00800A35 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610864CD29112B3D00800A35 /* User.swift */; };
 		6176F47428DE619E002D889C /* PerfectDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6176F47328DE619E002D889C /* PerfectDogApp.swift */; };
 		6176F47628DE619E002D889C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6176F47528DE619E002D889C /* RegisterView.swift */; };
 		6176F47828DE619F002D889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6176F47728DE619F002D889C /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		4F1B5ACF290E0156007FF712 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		4F8157D328E7BDCE00D28C03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F8F9E1A28F4D9B60031EEB6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		610864CD29112B3D00800A35 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6176F47028DE619E002D889C /* PerfectDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6176F47328DE619E002D889C /* PerfectDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectDogApp.swift; sourceTree = "<group>"; };
 		6176F47528DE619E002D889C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		610864CC29112B2E00800A35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				610864CD29112B3D00800A35 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6176F46728DE619E002D889C = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		6176F47228DE619E002D889C /* PerfectDog */ = {
 			isa = PBXGroup;
 			children = (
+				610864CC29112B2E00800A35 /* Models */,
 				61E57D76290FBB2C00D579BF /* Extensions */,
 				61E57D6E290FBAAC00D579BF /* Views */,
 				6176F47328DE619E002D889C /* PerfectDogApp.swift */,
@@ -204,6 +215,7 @@
 				61E57D73290FBB0100D579BF /* PerfectDogTabViewItem.swift in Sources */,
 				4F1B5AD0290E0156007FF712 /* LogoImage.swift in Sources */,
 				4F8F9E1B28F4D9B60031EEB6 /* LoginView.swift in Sources */,
+				610864CE29112B3D00800A35 /* User.swift in Sources */,
 				61E57D71290FBAE800D579BF /* UserPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

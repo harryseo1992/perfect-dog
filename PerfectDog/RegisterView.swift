@@ -51,11 +51,6 @@ struct RegisterView: View {
                         .offset(y: 70)
                         .foregroundColor(.orange)
                 }
-//                    Text("Already have an account? Login")
-//                        .frame(width: 300, height:40)
-//                        .offset(y: 110)
-//                        .foregroundColor(.orange)
-//                }
             }
             .frame(width: 300)
             .onAppear {

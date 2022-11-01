@@ -13,11 +13,11 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     @State var userIsLoggedIn = false
-    
+    @State private var shouldShowLoginAlert: Bool = false
     // toggling views
     var body: some View {
-        if (userIsLoggedIn) {
-            UserPage(userIsLoggedIn: userIsLoggedIn)
+        if (self.userIsLoggedIn) {
+            UserPage(isUserLoggedIn: $userIsLoggedIn)
         } else {
             content
         }
@@ -73,6 +73,9 @@ struct LoginView: View {
                     }
                 }
             }
+            .alert(isPresented: $shouldShowLoginAlert) {
+                Alert(title: Text("Email/Password incorrect"))
+            }
         .padding()
         }
         .navigationBarHidden(true)
@@ -83,6 +86,8 @@ struct LoginView: View {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 print(error?.localizedDescription ?? "")
+                self.shouldShowLoginAlert = true
+                return
             } else {
                 print("success")
             }
