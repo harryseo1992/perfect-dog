@@ -14,10 +14,11 @@ struct PerfectDogApp: App {
     init(){
         FirebaseApp.configure()
     }
+    static let session = SessionStore()
     
     var body: some Scene {
         WindowGroup {
-            RegisterView()
+            UserProfile().environmentObject(PerfectDogApp.session)
         }
     }
 }

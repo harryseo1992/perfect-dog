@@ -12,15 +12,16 @@ import Firebase
 struct LoginView: View {
     @State var email = ""
     @State var password = ""
-    @State var userIsLoggedIn = false
+//    @State var userIsLoggedIn = false
+    @EnvironmentObject private var session: SessionStore
     @State private var shouldShowLoginAlert: Bool = false
     // toggling views
     var body: some View {
-        if (self.userIsLoggedIn) {
-            UserPage(isUserLoggedIn: $userIsLoggedIn)
-        } else {
+//        if (self.userIsLoggedIn) {
+//            UserPage(isUserLoggedIn: $userIsLoggedIn)
+//        } else {
             content
-        }
+//        }
     }
     
     var content: some View {
@@ -40,7 +41,7 @@ struct LoginView: View {
                     .frame(width: 300, height: 1)
                     .foregroundColor(.orange)
                 
-                Button(action: { login() }) {
+                Button(action: { session.signIn(email: email, password: password) }) {
                     Text("Login")
                         .frame(width: 300, height:40)
                         .background(
@@ -65,33 +66,13 @@ struct LoginView: View {
 //                }
             }
             .frame(width: 300)
-            .onAppear {
-                Auth.auth().addStateDidChangeListener {
-                    (auth, user) in
-                    if user != nil {
-                        userIsLoggedIn.toggle()
-                    }
-                }
-            }
+            .onAppear(perform: self.session.listen)
             .alert(isPresented: $shouldShowLoginAlert) {
                 Alert(title: Text("Email/Password incorrect"))
             }
         .padding()
         }
         .navigationBarHidden(true)
-    }
-    
-
-    func login() {
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-                self.shouldShowLoginAlert = true
-                return
-            } else {
-                print("success")
-            }
-        }
     }
 }
 

@@ -11,16 +11,15 @@ import Firebase
 let coloredNavAppearance = UINavigationBarAppearance()
 
 struct UserPage: View {
-    @Binding var userIsLoggedIn: Bool
-    init(isUserLoggedIn: Binding<Bool>) {
+    init() {
         coloredNavAppearance.backgroundColor = .perfectDog
             coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
 
             UINavigationBar.appearance().standardAppearance = coloredNavAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
-        self._userIsLoggedIn = isUserLoggedIn
         }
+    @EnvironmentObject private var session: SessionStore
     var body: some View {
         VStack {
             NavigationView {
@@ -30,7 +29,7 @@ struct UserPage: View {
                     }.navigationTitle("Hello, User!")
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: { logOut() }) {
+                            Button(action: { self.session.signOut() }) {
                                 Text("Log Out")
                                     .frame(width: 100, height:40)
                                     .background(
@@ -42,26 +41,8 @@ struct UserPage: View {
                         }
                     }
                     }.accentColor(Color.perfectDog)
-                    .onAppear {
-                        Auth.auth().addStateDidChangeListener {
-                            (auth, user) in
-                            if user == nil {
-                                self.userIsLoggedIn.toggle()
-                            }
-                        }
-                    }
             }
         
-        }
-    }
-    func logOut() {
-        do {
-            try Auth.auth().signOut()
-            self.userIsLoggedIn = false
-            print("Attempting logout")
-            print("\(userIsLoggedIn)")
-        } catch  {
-            print("Already logged out")
         }
     }
 }
@@ -71,8 +52,7 @@ struct UserPage: View {
 
 
 struct UserPage_Previews: PreviewProvider {
-    @State static var isUserCurrentlyLoggedIn = false
     static var previews: some View {
-        UserPage(isUserLoggedIn: $isUserCurrentlyLoggedIn)
+        UserPage()
     }
 }
