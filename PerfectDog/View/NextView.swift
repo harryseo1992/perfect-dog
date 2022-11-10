@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NextView: View {
     var body: some View {
-        QuestionView()
+        QuestionView(currIndex: QuestionIndex())
     }
 }
 

@@ -1,45 +1,62 @@
+////
+////  NextQuestionManager.swift
+////  PerfectDog
+////
+////  Created by Timmy Lau on 2022-11-01.
+////
 //
-//  NextQuestionManager.swift
-//  PerfectDog
+//import Foundation
+//import SwiftUI
 //
-//  Created by Timmy Lau on 2022-11-01.
+//class NextQuestionManager: ObservableObject{
 //
-
-import Foundation
-import SwiftUI
-
-class NextQuestionManager: ObservableObject{
-    
-//    private(set) var question: [Trivia.Result] = []
-    @Published private(set) var length = 0
-    @Published private(set) var index = 0
-    @Published private(set) var reachedEnd = false
-    @Published private(set) var answerSelected = false
-    @Published private(set) var question: AttributedString = ""
-    @Published private(set) var answerChoices: [Answer] = []
-    @Published private(set) var progress: CGFloat = 0.00
-    
-    
-    
-    
-    
-    
-    func goToNextQuestion(){
-        if(index + 1 < length){
-            index += 1
-        } else{
-            reachedEnd = true
-        }
-    }
-    
-    func setQuestion(){
-        answerSelected = false
-        progress = CGFloat(Double (index + 1) / Double(length) * 360)
-        
-//        if index < length{
-//            let currentQuestion =
+//    
+//
+//
+//    let questionsArr = [
+//    "How active are you?",
+//    "Do you like big dogs?",
+//    "How much money are you willing to spend?"
+//    ]
+//
+//
+//
+////    private(set) var question: [Trivia.Result] = []
+////    @Published private(set) var length = questionsArr[5]
+//    @Published private(set) var index = 0
+//    @Published private(set) var reachedEnd = false
+//    @Published private(set) var answerSelected = false
+//    @Published private(set) var question: AttributedString = ""
+//    @Published private(set) var answerChoices: [Answer] = []
+//    @Published private(set) var progress: CGFloat = 0.00
+//    @Published private(set) var score = 0
+//
+//
+//
+//
+//
+//    func goToNextQuestion(){
+//        if(index + 1 < length){
+//            index += 1
+//            setQuestion()
+//        } else{
+//            reachedEnd = true
 //        }
-    }
-    
-    
-}
+//    }
+//
+//    func setQuestion(){
+//        answerSelected = false
+//        progress = CGFloat(Double (index + 1) / Double(length) * 360)
+//
+//        if index < length{
+//            let currentQuestion = questionsArr[index]
+//        }
+//    }
+//
+//    func selectQuestion(){
+//        answerSelected = true
+//        score += 1
+//    }
+//
+//
+//}

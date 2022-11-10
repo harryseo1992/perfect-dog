@@ -9,9 +9,11 @@ import Foundation
 
 
 //Uniquely identified by ID
-struct Answer: Identifiable{
-    var id = UUID()
-    var text: AttributedString
-    
-    
+//struct Answer: Identifiable{
+//    var id = UUID()
+
+struct Answer
+{
+    var text: String
 }
+

@@ -21,7 +21,7 @@
 		E54ABE9629121C41001D1F31 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54ABE9529121C41001D1F31 /* AnswerRow.swift */; };
 		E54ABE9829121F25001D1F31 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54ABE9729121F25001D1F31 /* PrimaryButton.swift */; };
 		E54ABE9A29122123001D1F31 /* NextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54ABE9929122123001D1F31 /* NextView.swift */; };
-		E54ABE9C2912222A001D1F31 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54ABE9B2912222A001D1F31 /* Trivia.swift */; };
+		E54ABE9C2912222A001D1F31 /* DogQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54ABE9B2912222A001D1F31 /* DogQuestions.swift */; };
 		E54ABE9E291222F6001D1F31 /* NextQuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54ABE9D291222F6001D1F31 /* NextQuestionManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		E54ABE9529121C41001D1F31 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		E54ABE9729121F25001D1F31 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		E54ABE9929122123001D1F31 /* NextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextView.swift; sourceTree = "<group>"; };
-		E54ABE9B2912222A001D1F31 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		E54ABE9B2912222A001D1F31 /* DogQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogQuestions.swift; sourceTree = "<group>"; };
 		E54ABE9D291222F6001D1F31 /* NextQuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextQuestionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,9 +59,11 @@
 		614784AD28E1423700BBB5DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6176F47528DE619E002D889C /* ContentView.swift */,
+				E54ABE8D2912171C001D1F31 /* QuestionView.swift */,
+				E54ABE9929122123001D1F31 /* NextView.swift */,
 				E54ABE8829120828001D1F31 /* Questions */,
 				614784AE28E1425300BBB5DF /* UserPage */,
-				E54ABE9929122123001D1F31 /* NextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,7 +102,6 @@
 				61FB6100290C81C500B4DB1B /* Extensions */,
 				614784AD28E1423700BBB5DF /* View */,
 				6176F47328DE619E002D889C /* PerfectDogApp.swift */,
-				6176F47528DE619E002D889C /* ContentView.swift */,
 				6176F47728DE619F002D889C /* Assets.xcassets */,
 				6176F47928DE619F002D889C /* Preview Content */,
 				E54ABE9D291222F6001D1F31 /* NextQuestionManager.swift */,
@@ -127,7 +128,6 @@
 		E54ABE8829120828001D1F31 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				E54ABE8D2912171C001D1F31 /* QuestionView.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E54ABE9229121BC3001D1F31 /* Answer.swift */,
-				E54ABE9B2912222A001D1F31 /* Trivia.swift */,
+				E54ABE9B2912222A001D1F31 /* DogQuestions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 				E54ABE9629121C41001D1F31 /* AnswerRow.swift in Sources */,
 				614784B028E1426A00BBB5DF /* UserPage.swift in Sources */,
 				E54ABE9A29122123001D1F31 /* NextView.swift in Sources */,
-				E54ABE9C2912222A001D1F31 /* Trivia.swift in Sources */,
+				E54ABE9C2912222A001D1F31 /* DogQuestions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
