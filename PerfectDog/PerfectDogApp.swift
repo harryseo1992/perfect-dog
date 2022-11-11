@@ -19,7 +19,8 @@ struct PerfectDogApp: App {
     var body: some Scene {
         WindowGroup {
 //            UserProfile().environmentObject(PerfectDogApp.session)
-            DogContentView();
+//            DogContentView();
+            PlayContentView();
         }
     }
 }
