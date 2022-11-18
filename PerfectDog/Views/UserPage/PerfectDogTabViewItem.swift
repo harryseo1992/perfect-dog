@@ -8,34 +8,28 @@
 import SwiftUI
 
 struct PerfectDogTabViewItem: View {
+    @State private var isShowingGameView = false
     var body: some View {
-        VStack {
-//            Image("PerfectDog")
-//                .resizable()
-//                .scaledToFit()
-//                .frame(width: 200, height: 200)
-//                .padding([.top, .bottom], 50)
-            LogoImage()
-                .offset(y: -50)
-                .padding([.top, .bottom], 100)
-//            Text("Perfect Doggo")
-//            Spacer()
-            Button(action: {}) {
-                Text("Choose your perfect doggo")
-                    .fontWeight(.medium)
-                    .padding(8.0)
-            }
-                .foregroundColor(.black)
-                .frame(maxWidth:.infinity)
-                .background(Color.perfectDog)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 100)
-                        .stroke(Color.perfectDog, lineWidth: 1)
-                )
-                .padding([.leading, .trailing, .bottom])
-        }.tabItem {
-            Image(systemName: "gamecontroller.fill")
-            Text("Play Perfect Dog")
+            VStack {
+                LogoImage()
+                    .offset(y: -50)
+                    .padding([.top, .bottom], 100)
+                NavigationLink(destination: PlayContentView(), isActive: $isShowingGameView) {
+                    Button(action: {
+                        isShowingGameView = true
+                    }) {
+                        Text("Choose your perfect doggo")
+                            .fontWeight(.medium)
+                            .padding()
+                            .background(Color.perfectDog)
+                            .cornerRadius(8)
+                            .foregroundColor(.black)
+                    }
+                    .padding([.leading, .trailing, .bottom])
+                }
+            }.tabItem {
+                Image(systemName: "gamecontroller.fill")
+                Text("Play Perfect Dog")
         }.tag(1)
     }
 }
