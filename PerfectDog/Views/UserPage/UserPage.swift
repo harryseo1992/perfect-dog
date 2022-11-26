@@ -11,14 +11,14 @@ import Firebase
 let coloredNavAppearance = UINavigationBarAppearance()
 
 struct UserPage: View {
-    init() {
-        coloredNavAppearance.backgroundColor = .perfectDog
-            coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-
-            UINavigationBar.appearance().standardAppearance = coloredNavAppearance
-            UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
-        }
+//    init() {
+//        coloredNavAppearance.backgroundColor = .perfectDog
+//            coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//            coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//
+//            UINavigationBar.appearance().standardAppearance = coloredNavAppearance
+//            UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
+//        }
     @EnvironmentObject private var session: SessionStore
     var body: some View {
         VStack {
@@ -26,7 +26,8 @@ struct UserPage: View {
                     TabView {
                         PerfectDogTabViewItem()
                         PastHistoryTabViewItem()
-                    }.navigationTitle("Hello, User!")
+                    }
+                    .navigationTitle("Hello, User!")
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: { self.session.signOut() }) {
@@ -37,11 +38,12 @@ struct UserPage: View {
                                             .fill(.linearGradient(colors: [.orange], startPoint: .top, endPoint: .bottomTrailing))
                                     )
                                     .foregroundColor(.white)
-                                    .offset(y: 25)
+                                    .offset(y: 50)
                         }
                     }
-                    }.accentColor(Color.perfectDog)
+                    }
             }
+            .navigationBarHidden(true)
         
         }
     }

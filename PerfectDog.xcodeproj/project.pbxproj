@@ -13,7 +13,7 @@
 		4F8157DB28E7BE8B00D28C03 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8157DA28E7BE8B00D28C03 /* FirebaseAuth */; };
 		4F8F9E1B28F4D9B60031EEB6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F9E1A28F4D9B60031EEB6 /* LoginView.swift */; };
 		610864CE29112B3D00800A35 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610864CD29112B3D00800A35 /* User.swift */; };
-		615B1C71291DE04F00687D0D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B1C70291DE04F00687D0D /* API.swift */; };
+		615B1C71291DE04F00687D0D /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B1C70291DE04F00687D0D /* Api.swift */; };
 		615B1C73291DE08500687D0D /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B1C72291DE08500687D0D /* Dog.swift */; };
 		615B1C7A291DE24C00687D0D /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B1C78291DE24C00687D0D /* Answer.swift */; };
 		615B1C7B291DE24C00687D0D /* DogQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615B1C79291DE24C00687D0D /* DogQuestions.swift */; };
@@ -29,19 +29,25 @@
 		6176F47828DE619F002D889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6176F47728DE619F002D889C /* Assets.xcassets */; };
 		6176F47B28DE619F002D889C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6176F47A28DE619F002D889C /* Preview Assets.xcassets */; };
 		617D490E2927ACEE0032C29F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 617D490D2927ACEE0032C29F /* GoogleService-Info.plist */; };
+		61A18E5E2931764300C16EE8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A18E5D2931764300C16EE8 /* GameView.swift */; };
 		61E57D71290FBAE800D579BF /* UserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D70290FBAE800D579BF /* UserPage.swift */; };
 		61E57D73290FBB0100D579BF /* PerfectDogTabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D72290FBB0100D579BF /* PerfectDogTabViewItem.swift */; };
 		61E57D75290FBB1B00D579BF /* PastHistoryTabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D74290FBB1B00D579BF /* PastHistoryTabViewItem.swift */; };
 		61E57D7A290FBB5B00D579BF /* PerfectDogColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E57D79290FBB5B00D579BF /* PerfectDogColor.swift */; };
 		61EEBC192915C0FE007783A3 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EEBC182915C0FE007783A3 /* SessionStore.swift */; };
 		61EEBC1B2915C433007783A3 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EEBC1A2915C433007783A3 /* UserProfile.swift */; };
+		61EF7AD3292E1950006DD2D9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EF7AD2292E1950006DD2D9 /* Question.swift */; };
+		61EF7AD8292E1B55006DD2D9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 61EF7AD7292E1B55006DD2D9 /* FirebaseFirestoreSwift */; };
+		61EF7ADA292E1DCB006DD2D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 61EF7AD9292E1DCB006DD2D9 /* FirebaseFirestore */; };
+		61EF7ADC292E90E1006DD2D9 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EF7ADB292E90E1006DD2D9 /* Quiz.swift */; };
+		61EF7ADF292E9425006DD2D9 /* QuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EF7ADE292E9425006DD2D9 /* QuizManagerVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F1B5ACF290E0156007FF712 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		4F8F9E1A28F4D9B60031EEB6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		610864CD29112B3D00800A35 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		615B1C70291DE04F00687D0D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		615B1C70291DE04F00687D0D /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		615B1C72291DE08500687D0D /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dog.swift; path = ../../../PerfectDogApi/PerfectDogApi/Dog.swift; sourceTree = "<group>"; };
 		615B1C78291DE24C00687D0D /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Answer.swift; path = "../../../perfect-dog-timmylau2/PerfectDog/Models/Answer.swift"; sourceTree = "<group>"; };
 		615B1C79291DE24C00687D0D /* DogQuestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogQuestions.swift; path = "../../../perfect-dog-timmylau2/PerfectDog/Models/DogQuestions.swift"; sourceTree = "<group>"; };
@@ -58,12 +64,16 @@
 		6176F47728DE619F002D889C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6176F47A28DE619F002D889C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		617D490D2927ACEE0032C29F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/untitled folder/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		61A18E5D2931764300C16EE8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		61E57D70290FBAE800D579BF /* UserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage.swift; sourceTree = "<group>"; };
 		61E57D72290FBB0100D579BF /* PerfectDogTabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectDogTabViewItem.swift; sourceTree = "<group>"; };
 		61E57D74290FBB1B00D579BF /* PastHistoryTabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastHistoryTabViewItem.swift; sourceTree = "<group>"; };
 		61E57D79290FBB5B00D579BF /* PerfectDogColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectDogColor.swift; sourceTree = "<group>"; };
 		61EEBC182915C0FE007783A3 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		61EEBC1A2915C433007783A3 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		61EF7AD2292E1950006DD2D9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		61EF7ADB292E90E1006DD2D9 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		61EF7ADE292E9425006DD2D9 /* QuizManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManagerVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,8 @@
 				4F8157D728E7BE8B00D28C03 /* FirebaseAnalytics in Frameworks */,
 				4F8157DB28E7BE8B00D28C03 /* FirebaseAuth in Frameworks */,
 				4F8157D928E7BE8B00D28C03 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				61EF7ADA292E1DCB006DD2D9 /* FirebaseFirestore in Frameworks */,
+				61EF7AD8292E1B55006DD2D9 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +98,8 @@
 				615B1C78291DE24C00687D0D /* Answer.swift */,
 				615B1C79291DE24C00687D0D /* DogQuestions.swift */,
 				610864CD29112B3D00800A35 /* User.swift */,
+				61EF7AD2292E1950006DD2D9 /* Question.swift */,
+				61EF7ADB292E90E1006DD2D9 /* Quiz.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +119,7 @@
 			children = (
 				6176F47228DE619E002D889C /* PerfectDog */,
 				6176F47128DE619E002D889C /* Products */,
+				61EF7AD6292E1B55006DD2D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +134,7 @@
 		6176F47228DE619E002D889C /* PerfectDog */ = {
 			isa = PBXGroup;
 			children = (
+				61EF7ADD292E9401006DD2D9 /* ViewModels */,
 				615B1C80291DE33E00687D0D /* Components */,
 				61EEBC152915C0D7007783A3 /* Logic */,
 				610864CC29112B2E00800A35 /* Models */,
@@ -152,6 +168,7 @@
 				615B1C89291DE3E100687D0D /* NextView.swift */,
 				615B1C7D291DE2CB00687D0D /* QuestionView.swift */,
 				61E57D6F290FBAB700D579BF /* UserPage */,
+				61A18E5D2931764300C16EE8 /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,9 +196,24 @@
 			children = (
 				615B1C72291DE08500687D0D /* Dog.swift */,
 				61EEBC182915C0FE007783A3 /* SessionStore.swift */,
-				615B1C70291DE04F00687D0D /* API.swift */,
+				615B1C70291DE04F00687D0D /* Api.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		61EF7AD6292E1B55006DD2D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61EF7ADD292E9401006DD2D9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				61EF7ADE292E9425006DD2D9 /* QuizManagerVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +236,8 @@
 				4F8157D628E7BE8B00D28C03 /* FirebaseAnalytics */,
 				4F8157D828E7BE8B00D28C03 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				4F8157DA28E7BE8B00D28C03 /* FirebaseAuth */,
+				61EF7AD7292E1B55006DD2D9 /* FirebaseFirestoreSwift */,
+				61EF7AD9292E1DCB006DD2D9 /* FirebaseFirestore */,
 			);
 			productName = PerfectDog;
 			productReference = 6176F47028DE619E002D889C /* PerfectDog.app */;
@@ -274,16 +308,20 @@
 				615B1C84291DE37A00687D0D /* AnswerRow.swift in Sources */,
 				61EEBC1B2915C433007783A3 /* UserProfile.swift in Sources */,
 				4F1B5AD0290E0156007FF712 /* LogoImage.swift in Sources */,
+				61EF7ADC292E90E1006DD2D9 /* Quiz.swift in Sources */,
 				61EEBC192915C0FE007783A3 /* SessionStore.swift in Sources */,
 				615B1C86291DE37A00687D0D /* ProgressBar.swift in Sources */,
 				4F8F9E1B28F4D9B60031EEB6 /* LoginView.swift in Sources */,
 				615B1C8A291DE3E100687D0D /* NextView.swift in Sources */,
 				610864CE29112B3D00800A35 /* User.swift in Sources */,
 				615B1C8C291DE40500687D0D /* DogContentView.swift in Sources */,
-				615B1C71291DE04F00687D0D /* API.swift in Sources */,
+				615B1C71291DE04F00687D0D /* Api.swift in Sources */,
+				61EF7AD3292E1950006DD2D9 /* Question.swift in Sources */,
 				615B1C7A291DE24C00687D0D /* Answer.swift in Sources */,
+				61EF7ADF292E9425006DD2D9 /* QuizManagerVM.swift in Sources */,
 				615B1C73291DE08500687D0D /* Dog.swift in Sources */,
 				615B1C7F291DE2CB00687D0D /* QuestionView.swift in Sources */,
+				61A18E5E2931764300C16EE8 /* GameView.swift in Sources */,
 				61E57D71290FBAE800D579BF /* UserPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +550,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4F8157D528E7BE8B00D28C03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		61EF7AD7292E1B55006DD2D9 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F8157D528E7BE8B00D28C03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		61EF7AD9292E1DCB006DD2D9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F8157D528E7BE8B00D28C03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
