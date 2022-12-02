@@ -19,7 +19,7 @@ struct RegisterView: View {
     }
     
     var content: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 LogoImage()
                     .offset(y:-50)
@@ -62,7 +62,7 @@ struct RegisterView: View {
                 }
             }
             .padding()
-        }
+//        }
         .navigationBarHidden(true)
     }
     

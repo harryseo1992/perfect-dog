@@ -12,7 +12,7 @@ struct GameView: View {
     var body: some View {
         if (quizManagerVM.model.quizCompleted) {
             Text("Sup")
-            DogContentView()
+            DogContentView(DogApi: Api())
         } else {
             QuestionView(QuizManagerVM: quizManagerVM)
         }

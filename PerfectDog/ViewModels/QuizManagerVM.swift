@@ -5,32 +5,10 @@
 //  Created by Jong Hwan Seo on 2022-11-23.
 //
 
-var DogQuestionsArr = [
-    "How active are you?",
-    "How much money are you willing to spend?",
-    "Do you like big dogs?",
-"Is your dog staying indoors or outdoors?",
-    "Would you prefer a calm or energetic dog?",
-"Is shedding a problem?",
-"Do you want to compete with your dogs",
-"Are you new to owning a dog?"
-]
-
-var DogAnswerArr = [
-    ["Not Active", "Moderate", "Active"],
-    ["0-100", "100-300", "500-1000"],
-    ["Yes", "No"],
-["Indoor", "Outdoor"],
-["Calm", "Energetic"],
-    ["Yes", "No"],
-    ["Yes", "No"],
-["No this is my first dog", "I am an expert"]
-
-]
-
 import Foundation
 
 class QuizManagerVM: ObservableObject {
+    @Published private (set) var progress: CGFloat = 0
     static var currentIndex = 0
     
     var selectedAnswers: [String] = []
@@ -63,11 +41,13 @@ class QuizManagerVM: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if (QuizManagerVM.currentIndex < QuizManagerVM.quizData.count - 1 && !self.model.quizCompleted) {
                 QuizManagerVM.currentIndex = QuizManagerVM.currentIndex + 1
+                self.progress = CGFloat(Double(QuizManagerVM.currentIndex + 1) / Double(QuizManagerVM.quizData.count) * 350)
                 self.model = QuizManagerVM.createGameModel(i: QuizManagerVM.currentIndex)
             } else {
                 self.model.quizCompleted = true
                 self.model.perfectDogMatchStatus = true
                 QuizManagerVM.currentIndex = 0 // reset
+                self.progress = 0 // reset
             }
         }
     }

@@ -12,9 +12,13 @@ class Api : ObservableObject{
     @Published var dogs = [Dog]()
     var dogsBreeds: [String] = ["akita","boxer","beagle"]
     let randomInt = Int.random(in: 0..<2)
+    var selectedDog: String = ""
     
     func loadData(completion:@escaping (Dog) -> ()) {
-        guard let url = URL(string: "https://dog.ceo/api/breed/\(dogsBreeds[randomInt])/images/random") else {
+        self.selectedDog = dogsBreeds[randomInt]
+        guard let url = URL(string: "https://dog.ceo/api/breed/\(self.selectedDog)/images/random")
+        
+        else {
             print("Invalid url...")
             return
         }
@@ -25,5 +29,7 @@ class Api : ObservableObject{
                 completion(dogs)
             }
         }.resume()
+        print(url)
     }
+
 }

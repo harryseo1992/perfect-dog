@@ -11,14 +11,7 @@ import Firebase
 let coloredNavAppearance = UINavigationBarAppearance()
 
 struct UserPage: View {
-//    init() {
-//        coloredNavAppearance.backgroundColor = .perfectDog
-//            coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-//            coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-//
-//            UINavigationBar.appearance().standardAppearance = coloredNavAppearance
-//            UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
-//        }
+
     @EnvironmentObject private var session: SessionStore
     var body: some View {
         VStack {
